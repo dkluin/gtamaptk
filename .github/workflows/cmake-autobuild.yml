@@ -25,42 +25,42 @@ jobs:
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
 
     - name: Upload gtamaptk-core.lib
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: gtamaptk-core
         path: ${{github.workspace}}/build/lib/${{matrix.buildtype}}/gtamaptk-core.lib
         
     - name: Upload gtamaptk-assignlods.exe
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: gtamaptk-assignlods
         path: ${{github.workspace}}/build/bin/${{matrix.buildtype}}/gtamaptk-assignlods.exe
 
     - name: Upload gtamaptk-buildtxdfolders.exe
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: gtamaptk-buildtxdfolders
         path: ${{github.workspace}}/build/bin/${{matrix.buildtype}}/gtamaptk-buildtxdfolders.exe
 
     - name: Upload gtamaptk-cullzone.exe
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: gtamaptk-cullzone
         path: ${{github.workspace}}/build/bin/${{matrix.buildtype}}/gtamaptk-cullzone.exe
     
     - name: Upload gtamaptk-dff2dfx.exe
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: gtamaptk-dff2dfx
         
     - name: Upload gtamaptk-entityinst.exe
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: gtamaptk-entityinst
         path: ${{github.workspace}}/build/bin/${{matrix.buildtype}}/gtamaptk-entityinst.exe
 
     - name: Upload gtamaptk-iplcomp.exe
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: gtamaptk-iplcomp
         path: ${{github.workspace}}/build/bin/${{matrix.buildtype}}/gtamaptk-iplcomp.exe
