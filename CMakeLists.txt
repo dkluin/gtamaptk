@@ -1,0 +1,26 @@
+cmake_minimum_required(VERSION 3.12)
+project(gtamaptk VERSION 1.0 LANGUAGES C CXX)
+
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+
+if(WIN32)
+    set(CompilerFlags CMAKE_CXX_FLAGS CMAKE_CXX_FLAGS_DEBUG CMAKE_CXX_FLAGS_RELEASE CMAKE_C_FLAGS CMAKE_C_FLAGS_DEBUG CMAKE_C_FLAGS_RELEASE)
+    add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+else()
+    set(CMAKE_SHARED_LINKER_FLAGS "-pthread -Wl,--no-as-needed -ldl")
+    set(CMAKE_CXX_FLAGS "-fvisibility=hidden -D_GLIBCXX_USE_CXX11_ABI=0 -save-temp")
+endif()
+
+set(LIBRW_INCLUDE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/vendor/librw)
+add_subdirectory(${LIBRW_INCLUDE_PATH})
+
+include(${CMAKE_CURRENT_SOURCE_DIR}/gtamaptk-core/CMakeLists.txt)
+include(${CMAKE_CURRENT_SOURCE_DIR}/gtamaptk-assignlods/CMakeLists.txt)
+include(${CMAKE_CURRENT_SOURCE_DIR}/gtamaptk-buildtxdfolders/CMakeLists.txt)
+include(${CMAKE_CURRENT_SOURCE_DIR}/gtamaptk-cullzone/CMakeLists.txt)
+include(${CMAKE_CURRENT_SOURCE_DIR}/gtamaptk-dff2dfx/CMakeLists.txt)
+include(${CMAKE_CURRENT_SOURCE_DIR}/gtamaptk-entityinst/CMakeLists.txt)
+include(${CMAKE_CURRENT_SOURCE_DIR}/gtamaptk-iplcomp/CMakeLists.txt)
