@@ -47,12 +47,6 @@ jobs:
       with:
         name: gtamaptk-cullzone
         path: ${{github.workspace}}/build/bin/${{env.BUILD_TYPE}}/gtamaptk-cullzone.exe
-    
-    - name: Upload gtamaptk-dff2dfx.exe
-      uses: actions/upload-artifact@v4
-      with:
-        name: gtamaptk-dff2dfx
-        path: ${{github.workspace}}/build/bin/${{env.BUILD_TYPE}}/gtamaptk-dff2dfx.exe
         
     - name: Upload gtamaptk-entityinst.exe
       uses: actions/upload-artifact@v4
