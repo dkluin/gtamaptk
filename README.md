@@ -1,5 +1,5 @@
 # GTA Mapping Toolkit (gtamaptk)
-[![CMake Autobuild](https://github.com/dkluin/gtamaptk/actions/workflows/cmake-autobuild.yml/badge.svg)](https://github.com/dkluin/gtamaptk/actions/workflows/cmake-autobuild.yml)
+[![Windows](https://github.com/dkluin/gtamaptk/actions/workflows/build-windows.yml/badge.svg)](https://github.com/dkluin/gtamaptk/actions/workflows/build-windows.yml)
 
 This is a list of all the small little tools I wrote whilst working on GTA: Underground.
 These are designed to tackle a specific problem I encountered and/or to do things that cannot easily be done with pre-existing tools. Writing little tools like these cut back on time significantly.
