@@ -37,4 +37,4 @@ Apart from actual commandline tools I also modified numerous scripts over the ye
 - There was a separate 3ds max script I wrote which more or less does the same thing as gtamaptk-buildtxdfolders, except that it never read an IDE. It just copy-pasted textures from one big folder to a destination folder, allowing us to build them with Magic later.
 
 ## Permission
-You're free to use anything for this project, given attribution (see also LICENSE.md)
+You're free to use anything from this project, given attribution (see also LICENSE.md)
