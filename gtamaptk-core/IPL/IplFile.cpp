@@ -144,12 +144,24 @@ bool IplFile::Read(const char* szFileName, bool bClearExisting) {
 }
 
 bool IplFile::ReadBinary(const char* szFileName, bool bClearExisting) {
-	static uint8_t gBuffer[1000000]; // 1mb. no sane person would use binary ipls larger than this
+#define MAX_BINARY_IPL_SIZE 1000000	 // 1mb, no sane person would use binary ipls larger than this
+	static uint8_t gBuffer[MAX_BINARY_IPL_SIZE];
 	BinaryIplHeader mHeader;
 
 	FILE* pFile = fopen(szFileName, "rb");
 	if (pFile == nullptr) {
 		SetLastErrorMsg("Error: Unable to open binary IPL: %s\n", szFileName);
+		return false;
+	}
+
+	fseek(pFile, 0, SEEK_END);
+	int32_t nSize = ftell(pFile);
+	fseek(pFile, 0, SEEK_SET);
+
+	if (nSize > MAX_BINARY_IPL_SIZE) {
+		SetLastErrorMsg("Error: Binary IPL is too large (%d bytes), maximum supported size is %d bytes\n", nSize, MAX_BINARY_IPL_SIZE);
+
+		fclose(pFile);
 		return false;
 	}
 
