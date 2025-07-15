@@ -24,11 +24,11 @@ There are more tools I've written through the ages that I wouldn't consider suit
 - An IPL:occl converter
 - I had a more "complex" converter that could decode a CULLZONE.DAT file and write out the attribute zones to an IPL but I chose to first write a basic compiler/decompiler for the aforementioned reasons. 
 - A III/VC paths converter
-- ...and probably other stuff.
 - A DFF-JSON conversion utility I wrote specifically for the UG website (it can preview all vehicle models)
 - A fork of The_Hero's Euryopa that works on UG
 - A web-based path previewer that fully supports FLA formats
 - I'm working on my own fork of Kams right now with additional features to allow you to export breakable sections etc. It's part of the workflow I have set up for GTA: Cottonmouth.
+- ...and probably other stuff.
 
 ## Other stuff
 Apart from actual commandline tools I also modified numerous scripts over the years to make sure our workflow was up to standards. These will probably be in a separate repository, but here are some examples:
