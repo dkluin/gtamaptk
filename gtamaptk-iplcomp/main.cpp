@@ -32,7 +32,7 @@ int main(int argc, char* argv[]) {
 		ARG_OPTION,
 		ARG_INPUT_FILE,
 		ARG_OUTPUT_FILE,
-		ARG_GAME_ROOT, // only used for binary IPLs
+		ARG_GAME_ROOT // only used for binary IPLs
 	};
 
 	if (argc < 2) {

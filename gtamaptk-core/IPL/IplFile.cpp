@@ -15,15 +15,15 @@ void IplFile::ClearEntries() {
 }
 
 bool IplFile::Read(const char* szFileName, bool bClearExisting) {
-	if (bClearExisting) {
-		ClearEntries();
-	}
-
 	FILE* pFile = fopen(szFileName, "r");
 
 	if (pFile == nullptr) {
 		SetLastErrorMsg("Error: Unable to open IPL: %s\n", szFileName);
 		return false;
+	}
+
+	if (bClearExisting)	{
+		ClearEntries();
 	}
 
 	int8_t nSection = IPL_SECTION_NONE;
@@ -147,14 +147,14 @@ bool IplFile::ReadBinary(const char* szFileName, bool bClearExisting) {
 	static uint8_t gBuffer[1000000]; // 1mb. no sane person would use binary ipls larger than this
 	BinaryIplHeader mHeader;
 
-	if (bClearExisting) {
-		ClearEntries();
-	}
-
 	FILE* pFile = fopen(szFileName, "rb");
 	if (pFile == nullptr) {
 		SetLastErrorMsg("Error: Unable to open binary IPL: %s\n", szFileName);
 		return false;
+	}
+
+	if (bClearExisting) {
+		ClearEntries();
 	}
 
 	fread(gBuffer, sizeof(gBuffer), 1, pFile);

@@ -21,3 +21,5 @@
 
 #include "IDE/IdeFile.h"
 #include "IPL/IplFile.h"
+
+#include "cullzone/CullZoneFile.h"

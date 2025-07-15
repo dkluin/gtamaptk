@@ -36,6 +36,8 @@ add_library(gtamaptk-core
     gtamaptk-core/IPL/section/IplZoneEntry.cpp
     gtamaptk-core/IPL/IplFile.h
     gtamaptk-core/IPL/IplFile.cpp
+    gtamaptk-core/cullzone/CullZoneFile.h
+    gtamaptk-core/cullzone/CullZoneFile.cpp
     gtamaptk-core/main/GameMap.h
     gtamaptk-core/main/GameMap.cpp
     gtamaptk-core/main/MapFileSection.h

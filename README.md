@@ -25,9 +25,16 @@ There are more tools I've written through the ages that I wouldn't consider suit
 - I had a more "complex" converter that could decode a CULLZONE.DAT file and write out the attribute zones to an IPL but I chose to first write a basic compiler/decompiler for the aforementioned reasons. 
 - A III/VC paths converter
 - ...and probably other stuff.
+- A DFF-JSON conversion utility I wrote specifically for the UG website (it can preview all vehicle models)
+- A fork of The_Hero's Euryopa that works on UG
+- A web-based path previewer that fully supports FLA formats
+- I'm working on my own fork of Kams right now with additional features to allow you to export breakable sections etc. It's part of the workflow I have set up for GTA: Cottonmouth.
 
 ## Other stuff
 Apart from actual commandline tools I also modified numerous scripts over the years to make sure our workflow was up to standards. These will probably be in a separate repository, but here are some examples:
 
 - We modified X's radar exporter to support variable map sizes, and had a massive radar image we composed from the mobile 256x256 tiles. This image was then extended, after which we drew the VC/III maps on top.
-- There was a separate 3ds max script I wrote which more or less does the same thing gtamaptk-buildtxdfolders, except that it never read an IDE. It just copy-pasted textures from one big folder to a destination folder, allowing us to build them with Magic later.
+- There was a separate 3ds max script I wrote which more or less does the same thing as gtamaptk-buildtxdfolders, except that it never read an IDE. It just copy-pasted textures from one big folder to a destination folder, allowing us to build them with Magic later.
+
+## Permission
+You're free to use anything for this project, given attribution (see also LICENSE.md)

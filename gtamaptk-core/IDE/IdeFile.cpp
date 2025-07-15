@@ -9,15 +9,15 @@ void IdeFile::ClearEntries() {
 }
 
 bool IdeFile::Read(const char* szFileName, bool bClearExisting) {
-	if (bClearExisting) {
-		ClearEntries();
-	}
-
 	FILE* pFile = fopen(szFileName, "r");
 
 	if (pFile == nullptr) {
 		SetLastErrorMsg("Error: Unable to open IDE: %s\n", szFileName);
 		return false;
+	}
+
+	if (bClearExisting) {
+		ClearEntries();
 	}
 
 	int8_t nSection = IDE_SECTION_NONE;
