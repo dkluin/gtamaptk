@@ -7,17 +7,14 @@ void ResolveModelNames(IplFile& mIplFile, GameMap& mGameMap) {
 		if (mGameMap.IsObjsEntry(it.m_nModelIndex)) {
 			IdeObjsEntry& mEntry = mGameMap.GetObjsEntry(it.m_nModelIndex);
 
-			printf("Resolved ID %d to %s\n", it.m_nModelIndex, mEntry.m_szModelName);
 			strcpy(it.m_szModelName, mEntry.m_szModelName);
 		} else if (mGameMap.IsTobjEntry(it.m_nModelIndex)) {
 			IdeTobjEntry& mEntry = mGameMap.GetTobjEntry(it.m_nModelIndex);
 
-			printf("Resolved ID %d to %s\n", it.m_nModelIndex, mEntry.m_szModelName);
 			strcpy(it.m_szModelName, mEntry.m_szModelName);
 		} else if (mGameMap.IsAnimEntry(it.m_nModelIndex)) {
 			IdeAnimEntry& mEntry = mGameMap.GetAnimEntry(it.m_nModelIndex);
 
-			printf("Resolved ID %d to %s\n", it.m_nModelIndex, mEntry.m_szModelName);
 			strcpy(it.m_szModelName, mEntry.m_szModelName);
 		} else {
 			printf("Error: Unable to find model name for ID %d\n", it.m_nModelIndex);

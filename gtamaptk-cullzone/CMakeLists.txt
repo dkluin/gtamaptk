@@ -5,4 +5,3 @@ target_include_directories(gtamaptk-cullzone PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}
 target_link_libraries(gtamaptk-cullzone PRIVATE gtamaptk-core)
 
 install(TARGETS gtamaptk-cullzone RUNTIME DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
-
