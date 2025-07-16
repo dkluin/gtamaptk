@@ -214,6 +214,8 @@ bool IplFile::Write(const char* szFileName) {
 	WriteSection(pFile, "jump", m_vJumpEntries);
 	WriteSection(pFile, "tcyc", m_vTcycEntries);
 	WriteSection(pFile, "auzo", m_vAuzoEntries);
+	WriteSection(pFile, "cars", m_vCarsEntries); // Not exported by the map exporter but appended either way
+	WriteSection(pFile, "zone", m_vZoneEntries); // Not exported by the map exporter but appended either way
 	WriteSection(pFile, "occl", m_vOcclEntries); // Not exported by the map exporter but appended either way
 
 	fclose(pFile);
