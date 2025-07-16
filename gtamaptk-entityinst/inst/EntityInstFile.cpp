@@ -100,7 +100,7 @@ bool EntityInstFile::WriteBinary(const char* szFileName) {
 	FILE* pFile;
 	
 	if (m_vEntityInstances.size() == 0) {
-		SetLastErrorMsg("Error: No entity instances stored in file struct");
+		SetLastErrorMsg("Error: Cannot write empty entity.inst file");
 		return false;
 	}
 
