@@ -7,14 +7,14 @@ bool PlayerEntityClassData::Read(const char* szLine) {
 	char szEntityClassName[MAX_PADDED_STRING];
 	Vector3d vPosition;
 	Quaternion qRotation;
-	int32_t nHitPoints;
+	int32_t unknown;
 
 	if (sscanf(szLine, "%s %s %s %f %f %f %f %f %f %f %d",
 		szEntityType, szInternalEntityName, szEntityClassName,
 		&vPosition.x, &vPosition.y, &vPosition.z,
 		&qRotation.x, &qRotation.y, &qRotation.z, &qRotation.w,
-		&nHitPoints) == 11) {
-		m_nHitPoints = nHitPoints;
+		&unknown) == 11) {
+		this->unknown = unknown;
 
 		return true;
 	}
@@ -28,17 +28,17 @@ void PlayerEntityClassData::ReadBinary(FILE* pFile) {
 
 	fread(&mData, sizeof(BinaryPlayerEntityClassData), 1, pFile);
 
-	m_nHitPoints = mData.m_nHitPoints;
+	unknown = mData.unknown;
 }
 
 void PlayerEntityClassData::Write(FILE* pFile) {
-	fprintf(pFile, "%d", m_nHitPoints);
+	fprintf(pFile, "%d", unknown);
 }
 
 void PlayerEntityClassData::WriteBinary(FILE* pFile) {
 	BinaryPlayerEntityClassData mData;
 
-	mData.m_nHitPoints = m_nHitPoints;
+	mData.unknown = unknown;
 
 	fwrite(&mData, sizeof(BinaryPlayerEntityClassData), 1, pFile);
 }
