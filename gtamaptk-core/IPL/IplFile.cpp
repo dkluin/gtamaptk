@@ -225,7 +225,7 @@ bool IplFile::Write(const char* szFileName) {
 bool IplFile::WriteBinary(const char* szFileName) {
 	BinaryIplHeader mHeader;
 
-	mHeader.m_dwIdentifier = 0x626E7279; // bnry
+	mHeader.m_dwIdentifier = 0x79726E62; // bnry
 	mHeader.m_nNumInstEntries = m_vInstEntries.size();
 	mHeader.m_nNumCullEntries = 0;
 	mHeader.m_nNumGrgeEntries = 0;
