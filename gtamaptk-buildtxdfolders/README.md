@@ -15,7 +15,7 @@ For GTA: Cottonmouth, we faced the exact same problem, so to solve it, we set up
 As explained above, this tool is best utilized as part of your workflow for custom cities. Once your scene models are all defined in an IDE file and are properly named, you just have to use the tool as follows:
 
 ```
-gtamaptk-buildtxdfolders.exe [path to individual DFF file] [path to an IDE file] [path to original texture folder containing the textures for your scene] [path to folder in which to generate the texture folders]
+gtamaptk-buildtxdfolders [path to individual DFF file] [path to an IDE file] [path to original texture folder containing the textures for your scene] [path to folder in which to generate the texture folders]
 ```
 
 For now, you still have to specify an individual DFF file. You can use the magic of the command line interface to iterate through all DFFs in a given folder:

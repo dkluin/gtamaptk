@@ -60,3 +60,15 @@ jobs:
         name: gtamaptk-iplcomp
         path: ${{github.workspace}}/build/bin/${{env.BUILD_TYPE}}/gtamaptk-iplcomp.exe
 
+    - name: Upload gtamaptk-idmover.exe
+      uses: actions/upload-artifact@v4
+      with:
+        name: gtamaptk-idmover
+        path: ${{github.workspace}}/build/bin/${{env.BUILD_TYPE}}/gtamaptk-idmover.exe
+
+    - name: Upload gtamaptk-mapmover.exe
+      uses: actions/upload-artifact@v4
+      with:
+        name: gtamaptk-mapmover
+        path: ${{github.workspace}}/build/bin/${{env.BUILD_TYPE}}/gtamaptk-mapmover.exe
+
