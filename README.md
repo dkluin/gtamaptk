@@ -15,6 +15,8 @@ The following tools are included:
 - gtamaptk-cullzone -> Can compile/decompile a CULLZONE.DAT file from GTA: III.
 - gtamaptk-entityinst -> Prop placement conversion tool for Manhunt entity.inst files. Outputs an IPL file you can use to port the files to GTA.
 - gtamaptk-iplcomp -> Custom IPL compiler/decompiler that can autoresolve model names when decompiling.
+- gtamaptk-idmover -> A tool that can remap IDs to a new range in both IDE and IPL files.
+- gtamaptk-mapmover -> A tool that can move maps using a specified offset.
 
 ## Coming later
 There are more tools I've written through the ages that I wouldn't consider suitable for public use, and thus need a few tweaks so you will be able to get the most of them. Here's a rough list of them:
