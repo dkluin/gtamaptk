@@ -45,9 +45,9 @@ jobs:
     - name: Upload gtamaptk-colsplit.exe
       uses: actions/upload-artifact@v4
       with:
-        name: gtamaptk-cullzone
+        name: gtamaptk-colsplit
         path: ${{github.workspace}}/build/bin/${{env.BUILD_TYPE}}/gtamaptk-colsplit.exe
-        
+
     - name: Upload gtamaptk-cullzone.exe
       uses: actions/upload-artifact@v4
       with:
