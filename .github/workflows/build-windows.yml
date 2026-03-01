@@ -42,6 +42,12 @@ jobs:
         name: gtamaptk-buildtxdfolders
         path: ${{github.workspace}}/build/bin/${{env.BUILD_TYPE}}/gtamaptk-buildtxdfolders.exe
 
+    - name: Upload gtamaptk-colsplit.exe
+      uses: actions/upload-artifact@v4
+      with:
+        name: gtamaptk-cullzone
+        path: ${{github.workspace}}/build/bin/${{env.BUILD_TYPE}}/gtamaptk-colsplit.exe
+        
     - name: Upload gtamaptk-cullzone.exe
       uses: actions/upload-artifact@v4
       with:
