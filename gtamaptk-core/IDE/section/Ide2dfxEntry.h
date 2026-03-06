@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../../main/Shared.hpp"
 #include "../../main/MapFileSection.h"
 #include "../../math/Vector3d.h"
 #include "../../math/RGBA.h"
@@ -86,6 +87,7 @@ public:
 			float m_fPointlightSize;
 			float m_fCoronaSize;
 			float m_fShadowSize;
+			uint8_t m_nShadowIntensity;
 			int8_t m_nFlashType;
 			bool m_bWetReflection;
 			int8_t m_nFlareType;
