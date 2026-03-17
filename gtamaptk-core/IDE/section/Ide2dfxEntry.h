@@ -10,8 +10,8 @@
 enum eIde2dfxType {
 	IDE2DFX_LIGHT,
 	IDE2DFX_PARTICLE,
-	IDE2DFX_ATTRACTOR,
-	IDE2DFX_PED_ATTRACTOR,
+	IDE2DFX_LOOKATPOINT,
+	IDE2DFX_PEDQUEUE,
 	IDE2DFX_SUNGLARE
 };
 
@@ -59,17 +59,17 @@ enum eIde2dfxParticleType {
 
 // This is only used in GTA: III, but is still read in VC etc.
 // 
-enum eIde2dfxAttractorType {
-	IDE2DFX_ATTRACTOR_ICECREAM,
-	IDE2DFX_ATTRACTOR_STARE
+enum eIde2dfxLookAtPointType {
+	IDE2DFX_LOOKATPOINT_ICECREAM,
+	IDE2DFX_LOOKATPOINT_STARE
 };
 
-enum eIde2dfxPedAttractorType {
-	IDE2DFX_PEDATTRACTOR_ATM,
-	IDE2DFX_PEDATTRACTOR_SIT,
-	IDE2DFX_PEDATTRACTOR_WAIT_BUS,
-	IDE2DFX_PEDATTRACTOR_SHOPPING, // looking at store fronts
-	IDE2DFX_PEDATTRACTOR_RAIN_SHELTER
+enum eIde2dfxPedQueueType {
+	IDE2DFX_PEDQUEUE_ATM,
+	IDE2DFX_PEDQUEUE_SIT,
+	IDE2DFX_PEDQUEUE_WAIT_BUS,
+	IDE2DFX_PEDQUEUE_SHOPPING, // looking at store fronts
+	IDE2DFX_PEDQUEUE_RAIN_SHELTER
 };
 
 class Ide2dfxEntry : public IMapFileSectionEntry {
@@ -104,13 +104,13 @@ public:
 			int8_t m_nType;
 			Vector3d m_vDir;
 			uint8_t m_nProbability;
-		} m_mAttractorData;
+		} m_mLookAtPointData;
 
 		struct {
 			int8_t m_nType;
 			Vector3d m_vQueueDir;
 			Vector3d m_vUseDir;
-		} m_mPedAttractorData;
+		} m_mPedQueueData;
 	};
 
 	int8_t GetType() { return IDE_SECTION_2DFX; }

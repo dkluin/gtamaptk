@@ -80,34 +80,34 @@ bool Ide2dfxEntry::Read(const char* szLine) {
             break;
         }
 
-        case IDE2DFX_ATTRACTOR: {
+        case IDE2DFX_LOOKATPOINT: {
             int32_t nAttractorType;
 			Vector3d vDir;
             int32_t nProbability;
 
             if (sscanf(pExtraFields, " %d %f %f %f %d", &nAttractorType, &vDir.x, &vDir.y, &vDir.z, &nProbability) != 5) {
-                SetLastErrorMsg("Error: IDE:2DFX ATTRACTOR line has wrong number of fields: \"%s\"\n", szLine);
+                SetLastErrorMsg("Error: IDE:2DFX LOOK AT POINT line has wrong number of fields: \"%s\"\n", szLine);
                 return false;
             }
 
-            m_mAttractorData.m_nType = nAttractorType;
-            m_mAttractorData.m_vDir = vDir;
-			m_mAttractorData.m_nProbability = nProbability;
+            m_mLookAtPointData.m_nType = nAttractorType;
+            m_mLookAtPointData.m_vDir = vDir;
+			m_mLookAtPointData.m_nProbability = nProbability;
             break;
         }
 
-        case IDE2DFX_PED_ATTRACTOR: {
+        case IDE2DFX_PEDQUEUE: {
             int32_t nPedType;
 			Vector3d vQueueDir, vUseDir;
 
             if (sscanf(pExtraFields, " %d %f %f %f %f %f %f", &nPedType, &vQueueDir.x, &vQueueDir.y, &vQueueDir.z, &vUseDir.x, &vUseDir.y, &vUseDir.z) != 7) {
-                SetLastErrorMsg("Error: IDE:2DFX PED_ATTRACTOR line has wrong number of fields (expected 7 after type): \"%s\"\n", szLine);
+                SetLastErrorMsg("Error: IDE:2DFX PED QUEUE line has wrong number of fields (expected 7 after type): \"%s\"\n", szLine);
                 return false;
             }
 
-            m_mPedAttractorData.m_nType = nPedType;
-			m_mPedAttractorData.m_vQueueDir = vQueueDir;
-            m_mPedAttractorData.m_vUseDir = vUseDir;
+            m_mPedQueueData.m_nType = nPedType;
+			m_mPedQueueData.m_vQueueDir = vQueueDir;
+            m_mPedQueueData.m_vUseDir = vUseDir;
             break;
         }
 
