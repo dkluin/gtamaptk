@@ -48,12 +48,24 @@ jobs:
         name: gtamaptk-colsplit
         path: ${{github.workspace}}/build/bin/${{env.BUILD_TYPE}}/gtamaptk-colsplit.exe
 
+    - name: Upload gtamaptk-conv2dfx.exe
+      uses: actions/upload-artifact@v4
+      with:
+        name: gtamaptk-conv2dfx
+        path: ${{github.workspace}}/build/bin/${{env.BUILD_TYPE}}/gtamaptk-conv2dfx.exe
+
     - name: Upload gtamaptk-cullzone.exe
       uses: actions/upload-artifact@v4
       with:
         name: gtamaptk-cullzone
         path: ${{github.workspace}}/build/bin/${{env.BUILD_TYPE}}/gtamaptk-cullzone.exe
         
+    - name: Upload gtamaptk-dump2dfx.exe
+      uses: actions/upload-artifact@v4
+      with:
+        name: gtamaptk-dump2dfx
+        path: ${{github.workspace}}/build/bin/${{env.BUILD_TYPE}}/gtamaptk-dump2dfx.exe
+
     - name: Upload gtamaptk-entityinst.exe
       uses: actions/upload-artifact@v4
       with:
@@ -78,3 +90,14 @@ jobs:
         name: gtamaptk-mapmover
         path: ${{github.workspace}}/build/bin/${{env.BUILD_TYPE}}/gtamaptk-mapmover.exe
 
+    - name: Upload gtamaptk-merge2dfx.exe
+      uses: actions/upload-artifact@v4
+      with:
+        name: gtamaptk-merge2dfx
+        path: ${{github.workspace}}/build/bin/${{env.BUILD_TYPE}}/gtamaptk-merge2dfx.exe
+
+    - name: Upload gtamaptk-validatelods.exe
+      uses: actions/upload-artifact@v4
+      with:
+        name: gtamaptk-validatelods
+        path: ${{github.workspace}}/build/bin/${{env.BUILD_TYPE}}/gtamaptk-validatelods.exe
