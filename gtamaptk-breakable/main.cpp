@@ -133,7 +133,6 @@ void AttachBreakableInfo(rw::Geometry* pGeometry, bool bAutoresolveMatID) {
 			rw::Mesh* pMeshes = pGeometry->meshHeader->getMeshes();
 			for (rw::uint32 j = 0; j < pGeometry->meshHeader->numMeshes; j++) {
 				rw::uint32 nFoundMeshGroup;
-				rw::uint32 nMatID;
 
 				nFoundMeshGroup = -1;
 				for (rw::uint32 k = 0; k < pMeshes[j].numIndices; k++) {
