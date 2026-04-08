@@ -18,7 +18,7 @@ gtamaptk-breakable -m [DFF filename]
 ```
 
 
-Now, since Kams does not write out the material ID properly in the triangle data itself, you may need to let the game figure out the material ID manually from the mesh group data inside the DFF.
+Now, since Kams does not write out the material ID properly in the triangle data itself, you may need to let the tool figure out the material ID manually from the mesh group data inside the DFF.
 This is where the `-a` option comes in:
 
 ```
