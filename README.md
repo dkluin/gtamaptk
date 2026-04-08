@@ -10,6 +10,7 @@ I decided to release them, I gave them all a fresh coat of paint, set up a nice 
 The following tools are included:
 
 - gtamaptk-assignlods -> Can be used to assign LODs in one IPL (can be binary or text) which are located in a separate IPL.
+- gtamaptk-breakable -> Generates a breakable DFF section for a given DFF. Very useful when making specific models breakable in-game.
 - gtamaptk-buildtxdfolders -> Given an IDE file and list of DFF models, this tool can autobuild TXD folders, assuming you have one big texture folder. Used for GTA: Cottonmmouth and has its roots in Midway's development workflow.
 - gtamaptk-conv2dfx -> Converts III/VC 2DFX data to 2dfx sections and appends them to output DFF files.
 - gtamaptk-core -> Shared library that can read/write IDE & IPL files. This library is used by pretty much all of the tools listed here.

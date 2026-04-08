@@ -36,6 +36,12 @@ jobs:
         name: gtamaptk-assignlods
         path: ${{github.workspace}}/build/bin/${{env.BUILD_TYPE}}/gtamaptk-assignlods.exe
 
+    - name: Upload gtamaptk-breakable.exe
+      uses: actions/upload-artifact@v4
+      with:
+        name: gtamaptk-breakable
+        path: ${{github.workspace}}/build/bin/${{env.BUILD_TYPE}}/gtamaptk-breakable.exe
+
     - name: Upload gtamaptk-buildtxdfolders.exe
       uses: actions/upload-artifact@v4
       with:

@@ -19,6 +19,7 @@ add_subdirectory(${LIBRW_INCLUDE_PATH})
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/gtamaptk-core/CMakeLists.txt)
 include(${CMAKE_CURRENT_SOURCE_DIR}/gtamaptk-assignlods/CMakeLists.txt)
+include(${CMAKE_CURRENT_SOURCE_DIR}/gtamaptk-breakable/CMakeLists.txt)
 include(${CMAKE_CURRENT_SOURCE_DIR}/gtamaptk-buildtxdfolders/CMakeLists.txt)
 include(${CMAKE_CURRENT_SOURCE_DIR}/gtamaptk-colsplit/CMakeLists.txt)
 include(${CMAKE_CURRENT_SOURCE_DIR}/gtamaptk-conv2dfx/CMakeLists.txt)
